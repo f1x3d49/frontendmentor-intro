@@ -5,6 +5,8 @@ import { ReactComponent as ADown } from "../images/icon-arrow-down.svg";
 import { ReactComponent as AUp } from "../images/icon-arrow-up.svg";
 import { ReactComponent as Hamburger } from "../images/icon-menu.svg";
 import { ReactComponent as Close } from "../images/icon-close-menu.svg";
+import Example from "./Example";
+import FeaturesDropdown from "./FeaturesDropdown";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -18,9 +20,8 @@ const Navbar = () => {
           className="w-auto h-auto object-cover hover:cursor-pointer"
         />
         <ul className="hidden md:flex select-none">
-          <li className="p-4 flex gap-1 justify-center items-center hover:cursor-pointer hover:text-ablack">
-            <h2>Features</h2>
-            <ADown />
+          <li className="p-4 flex gap-1 justify-center items-center hover:cursor-pointer">
+            <FeaturesDropdown />
           </li>
           <li className="p-4 flex gap-1 justify-center items-center hover:cursor-pointer hover:text-ablack">
             <h2>Company</h2>
