@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Logo from "../images/logo.svg";
-import { ReactComponent as ADown } from "../images/icon-arrow-down.svg";
-import { ReactComponent as AUp } from "../images/icon-arrow-up.svg";
 import { ReactComponent as Hamburger } from "../images/icon-menu.svg";
 import { ReactComponent as Close } from "../images/icon-close-menu.svg";
 import FeaturesDropdown from "./FeaturesDropdown";
