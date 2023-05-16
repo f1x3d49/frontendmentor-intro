@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         main: ["Epilogue", "sans-serif"],
       },
+      backgroundImage: {
+        mobile: "url(/src/images/image-hero-mobile.png)",
+      },
     },
   },
   plugins: [],

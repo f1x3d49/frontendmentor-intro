@@ -7,14 +7,14 @@ import { ReactComponent as ToDo } from "../images/icon-todo.svg";
 import { ReactComponent as Plan } from "../images/icon-planning.svg";
 import { ReactComponent as Reminder } from "../images/icon-reminders.svg";
 
-export default function FeaturesDropdown() {
+export default function MobileFeaturesDropdown() {
   const [open, setOpen] = useState(false);
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button
           onClick={() => setOpen(!open)}
-          className="p-2 flex gap-1 items-center hover:cursor-pointer hover:text-ablack"
+          className=" flex gap-2 items-center hover:cursor-pointer hover:text-ablack"
         >
           <h2>Features</h2>
           {open ? (
@@ -34,7 +34,7 @@ export default function FeaturesDropdown() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute flex justify-center right-0 top-14 z-10 w-36 rounded-lg bg-awhite shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="relative flex justify-center right-0 top-0 z-10 w-36  bg-awhite focus:outline-none">
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (

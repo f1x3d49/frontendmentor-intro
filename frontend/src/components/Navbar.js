@@ -1,36 +1,36 @@
 import React, { useState } from "react";
-import { Menu } from "@headlessui/react";
 import Logo from "../images/logo.svg";
 import { ReactComponent as ADown } from "../images/icon-arrow-down.svg";
 import { ReactComponent as AUp } from "../images/icon-arrow-up.svg";
 import { ReactComponent as Hamburger } from "../images/icon-menu.svg";
 import { ReactComponent as Close } from "../images/icon-close-menu.svg";
-import Example from "./Example";
 import FeaturesDropdown from "./FeaturesDropdown";
+import CompanyDropdown from "./CompanyDropdown";
+import MobileFeaturesDropdown from "./MobileFeaturesDropdown";
+import MobileCompanyDropdown from "./MobileCompanyDropdown";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
 
   return (
-    <div className="flex justify-between items-center max-w-[1440px] h-24 text-md text-mgray">
+    <div className="flex justify-between items-center pt-5 pb-2 px-5 max-w-[1440px] h-auto text-md text-mgray">
       <div className="flex justify-between items-center gap-4">
         <img
           src={Logo}
           alt="logo"
           className="w-auto h-auto object-cover hover:cursor-pointer"
         />
-        <ul className="hidden md:flex select-none">
-          <li className="p-4 flex gap-1 justify-center items-center hover:cursor-pointer">
+        <ul className="hidden md:flex md:items-center md:flex-1 select-none">
+          <li className="p-2 hover:cursor-pointer">
             <FeaturesDropdown />
           </li>
-          <li className="p-4 flex gap-1 justify-center items-center hover:cursor-pointer hover:text-ablack">
-            <h2>Company</h2>
-            <ADown />
+          <li className="p-2 hover:cursor-pointer">
+            <CompanyDropdown />
           </li>
-          <li className="p-4 hover:cursor-pointer hover:text-ablack">
+          <li className="p-2 hover:cursor-pointer hover:text-ablack">
             Careers
           </li>
-          <li className="p-4 hover:cursor-pointer hover:text-ablack">About</li>
+          <li className="p-2 hover:cursor-pointer hover:text-ablack">About</li>
         </ul>
       </div>
       <div></div>
@@ -65,12 +65,10 @@ const Navbar = () => {
         <div className="flex flex-col gap-4 p-6">
           <ul className="flex flex-col gap-3 select-none">
             <li className=" flex gap-2 items-center">
-              <h2>Features</h2>
-              <ADown />
+              <MobileFeaturesDropdown />
             </li>
             <li className=" flex gap-2 items-center">
-              <h2>Company</h2>
-              <ADown />
+              <MobileCompanyDropdown />
             </li>
             <li className=" hover:cursor-pointer hover:text-ablack">Careers</li>
             <li className=" hover:cursor-pointer hover:text-ablack">About</li>
